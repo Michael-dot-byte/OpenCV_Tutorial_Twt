@@ -20,3 +20,12 @@ cv2.destroyAllWindows()
 '''
 
 #copy one part of the image and copy it somewhere else
+#take the pixels from row 500 bis 700 und davon die colums 600:900
+tag = img[500:700, 600:900]  #part of the picture
+
+#paste this on another location in the image; needs same dimeension/ size
+img[100:300, 650:950] = tag
+
+cv2.imshow('Image', img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
