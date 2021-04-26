@@ -1,6 +1,8 @@
 import numpy as np
 import cv2
 
+# template image (e.g. ball) need to have about the same size as in the image where they are searched for
+
 img = cv2.resize(cv2.imread('../assets/soccer_practice.jpg',0), (0,0), fx= 0.8, fy=0.8)
 template = cv2.resize(cv2.imread('../assets/shoe.PNG',0), (0,0), fx=0.8, fy=0.8)
 h,w =template.shape     #is only a grayscale, so no rgb values
@@ -33,6 +35,3 @@ for method in methods:
     cv2.imshow('Match', img2)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
-
-
-# template image (e.g. ball) need to have about the same size as in the image where they are searched for
